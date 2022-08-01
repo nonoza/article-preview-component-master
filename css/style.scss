@@ -1,0 +1,124 @@
+@import 'styleguide.scss';
+
+body {
+    background-color: $lightGrayishBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: hidden;
+    font-family: $headings;
+    font-size: $bodyCopy;
+    main {
+        .container {
+            width: 731px;
+            height: 280px;
+            background-color: $white;
+            display: flex;
+            flex-direction: row;
+            @media (max-width:$mobileWidth) {
+                flex-direction: column;
+                width: 336px;
+                height: 545px;
+            }
+            .article-picture {
+                 background: url(../images/drawers.jpg) no-repeat;
+                 background-size: cover;
+                 padding: 60px;
+                 width: 57%;
+                 @media (max-width:$mobileWidth) {
+                    width: 66%;
+                    height: 100%;
+                }
+            }
+            .article-copy {
+                padding: 30px;
+
+                h1 {
+                    margin: 0;
+                    font-size: 20px;
+                    color: $veryDarkGrayBlue;
+                    margin-bottom: 12px;
+                }
+            .article-sub-copy {
+                p {
+                    margin: 0;
+                    margin-bottom: 12px;
+                    color: $desaturatedDarkBlue;
+                    font-weight: 500;
+                   
+                }
+            }
+            .article-author {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 60%;
+                .author-img {
+                display: contents;
+                    img {
+                        width: 20%;
+                        height: 40%;
+                        border-radius: 70%;
+                    }
+                }
+                .author-info {
+                    h2 {
+                        margin: 0;
+                        font-size: $bodyCopy;
+                    }
+                    p {
+                        margin: 0;
+                        font-size: $bodyCopy;
+                    }
+                }
+                .social-share {
+                    position: relative;
+                    left: 112px;
+                    top: 12px;
+                    width: 33px;
+                    background-color: $lightGrayishBlue;
+                    height: 32px;
+                    border-radius: 30px;
+                   img {
+                    margin-left: 9px;
+                    margin-top: 7px;
+                   }
+                
+                }
+                .message {
+                    display:none;
+                    height: 45px;
+                    width: 241px;
+                    border-radius: 8px;
+                    position: relative;
+                    bottom: 82px;
+                    right: 99px;
+                    color: $lightGrayishBlue;
+                    background: $desaturatedDarkBlue;
+                    &::after {
+                        content: "";
+                        background: $desaturatedDarkBlue;
+                        height: 16px;
+                        width: 16px;
+                        position: absolute;
+                        bottom: -4px;
+                        left: 50%;
+                        transform: translate(-50%) rotate(45deg);
+                    }
+                  }
+                .author-info {
+                    h2 {
+                        margin: 0;
+                        color: $veryDarkGrayBlue;
+                    }
+                    p {
+                        color: $desaturatedDarkBlue;
+                    }
+                }
+
+            }
+            }
+        }
+    }
+}
