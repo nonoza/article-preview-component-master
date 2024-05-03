@@ -1,6 +1,7 @@
 
 
-document.getElementById('btn').addEventListener('click', function() {
+document.getElementById('btn').addEventListener('click', function(e) {
+    e.preventDefault();
     let socialBtn = document.querySelector(".message");
     if (socialBtn.style.display === "none") {
         socialBtn.style.display = "block";
